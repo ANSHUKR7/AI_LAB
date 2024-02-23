@@ -1,0 +1,12 @@
+/* Calculates X raised to power N */
+power(X, N, R) :-
+    power(X, N, 1, R).
+
+/* Recursive definition for power */
+power(_, 0, R, R).
+
+power(X, N, Temp, Res) :-
+    N > 0,
+    N1 is N-1,
+    Temp1 is Temp * X,
+    power(X, N1, Temp1, Res).

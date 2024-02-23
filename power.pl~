@@ -1,0 +1,6 @@
+pow(Num,1,Num).
+pow(Num,0,1).
+pow(Num,X,Res):-
+    X1 is X-1,
+    pow(Num,X1,Z),
+    Res is Num *Z.
